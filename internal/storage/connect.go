@@ -2,8 +2,11 @@ package storage
 
 import (
 	"fmt"
+
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
+
+	"github.com/awesomeProject/internal/config"
 )
 
 type Connector interface {
@@ -14,10 +17,10 @@ type PostgresConnector struct {
 	URI string
 }
 
-func NewPostgresConnector(host, dbName, user, password string, port int) *PostgresConnector {
+func NewPostgresConnector(cfg config.Database) *PostgresConnector {
 	return &PostgresConnector{
 		URI: fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%d sslmode=disable TimeZone=Asia/Shanghai",
-			host, user, password, dbName, port),
+			cfg.Host, cfg.User, cfg.Password, cfg.Name, cfg.Port),
 	}
 }
 

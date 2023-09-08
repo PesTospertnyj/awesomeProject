@@ -1,9 +1,11 @@
 package handlers
 
 import (
-	"github.com/awesomeProject/internal/services"
-	"github.com/labstack/echo/v4"
 	"net/http"
+
+	"github.com/labstack/echo/v4"
+
+	"github.com/awesomeProject/internal/services"
 )
 
 type UserController struct {

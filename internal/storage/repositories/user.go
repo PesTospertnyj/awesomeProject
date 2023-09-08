@@ -1,8 +1,9 @@
 package repositories
 
 import (
-	"github.com/awesomeProject/internal/storage/models"
 	"gorm.io/gorm"
+
+	"github.com/awesomeProject/internal/storage/models"
 )
 
 type userRepository struct {

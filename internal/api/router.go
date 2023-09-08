@@ -1,11 +1,12 @@
 package api
 
 import (
+	"github.com/labstack/echo/v4"
+	"gorm.io/gorm"
+
 	"github.com/awesomeProject/internal/api/handlers"
 	"github.com/awesomeProject/internal/services"
 	"github.com/awesomeProject/internal/storage/repositories"
-	"github.com/labstack/echo/v4"
-	"gorm.io/gorm"
 )
 
 type Router struct {
