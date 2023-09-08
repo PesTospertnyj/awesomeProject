@@ -1,21 +1,20 @@
 package dto
 
 type GetUserDto struct {
-	ID       int    `json:"id"`
-	Name     string `json:"name"`
-	Email    string `json:"email"`
-	Password string `json:"password"`
+	ID    uint   `json:"id"`
+	Name  string `json:"name"`
+	Email string `json:"email"`
 }
 
 type CreateUserDto struct {
-	ID       string `json:"id"`
+	ID       uint   `json:"id"`
 	Name     string `json:"name"`
 	Email    string `json:"email"`
 	Password string `json:"password"`
 }
 
 type UpdateUserDto struct {
-	ID    int    `json:"id"`
+	ID    uint   `json:"id"`
 	Name  string `json:"name"`
 	Email string `json:"email"`
 }

@@ -1,15 +1,19 @@
 package handlers
 
 import (
+	"github.com/awesomeProject/internal/services"
 	"github.com/labstack/echo/v4"
 	"net/http"
 )
 
 type UserController struct {
+	service services.UserService
 }
 
-func NewUserController() UserController {
-	return UserController{}
+func NewUserController(userService services.UserService) UserController {
+	return UserController{
+		service: userService,
+	}
 }
 
 func (uc *UserController) Get(c echo.Context) error {

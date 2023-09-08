@@ -1,11 +1,13 @@
 package services
 
-import "awesomeProject/internal/storage/models"
+import (
+	"github.com/awesomeProject/internal/api/dto"
+)
 
 type UserService interface {
-	Get() ([]models.User, error)
-	GetByID(id int) (models.User, error)
-	Create() (models.User, error)
-	Update(models models.User) (models.User, error)
+	Get() ([]dto.GetUserDto, error)
+	GetByID(id int) (dto.GetUserDto, error)
+	Create(dto dto.CreateUserDto) (dto.GetUserDto, error)
+	Update(dto dto.UpdateUserDto) (dto.GetUserDto, error)
 	Delete(id int) error
 }
